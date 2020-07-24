@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {View, StyleSheet, Image, Text} from "react-native";
+import {View, StyleSheet, Image, Text, YellowBox, LogBox, Platform} from "react-native";
 import {RNCamera} from 'react-native-camera';
 import RNVideo from "react-native-video";
 import fs from "react-native-fs";
@@ -7,6 +7,16 @@ import fs from "react-native-fs";
 import TopAction from "./TopAction";
 import BottomAction from "./BottomAction";
 import PreviewActionContainer from "./PreviewActionContainer";
+
+if(LogBox){
+    LogBox.ignoreLogs([
+        "Video is not recording"
+    ]);
+} else if(YellowBox){
+    YellowBox.ignoreWarnings([
+        "Video is not recording"
+    ]);
+}
 
 export const VideoQuality = RNCamera.Constants.VideoQuality;
 
@@ -41,18 +51,19 @@ const styles = StyleSheet.create(
             flex: 1
         },
         actionBottom: {
-            height: 200,
+            height: 150,
             width: "100%",
             position: "absolute",
             zIndex: 1,
-            bottom: 0
+            bottom: 0,
+            marginBottom: "15%"
         },
         actionTop: {
             height: 100,
             width: "100%",
             position: "absolute",
             zIndex: 1,
-            top: 0
+            top: "5%"
         }
     }
 );
@@ -149,6 +160,9 @@ export default (
                 type: "video",
                 ...data
             });
+        }).catch(()=>{
+            setMedia(null);
+            camera.stopRecording();
         });
     };
 
@@ -211,7 +225,7 @@ export default (
                                             disableRecording={disableRecording}
                                             disableTakingPicture={disableTakingPicture}
                                             captureButtonProps={{
-                                                duration: videoDuration
+                                                duration: videoDuration + 1000
                                             }}
                                             onTakePicture={() => {
                                                 onTakePicturePress(camera);

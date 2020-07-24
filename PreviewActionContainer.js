@@ -10,8 +10,8 @@ const styles = StyleSheet.create(
             width: "100%",
             position: "absolute",
             bottom: 0,
-            height: 150,
-            marginBottom: 50
+            height: 80,
+            marginBottom: "40%"
         },
         actionContainer: {
             flex: 1,

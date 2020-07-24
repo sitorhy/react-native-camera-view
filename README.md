@@ -2,7 +2,7 @@
 
 #### Simple controls for react-native-camera
 
-![](./screenshot.png)
+![](./screenshot.jpg)
 
 ## Dependent
 
@@ -97,7 +97,7 @@ export default function App() {
 
 ## Props
 
-+ ### videoQuality
+#### videoQuality
   
 This option specifies the quality of the video to be taken, default 480p.
 ```jsx
@@ -109,7 +109,7 @@ import {VideoQuality} from "react-native-camera-view";
 ```
 
 
-+ ### videoBitrate
+#### videoBitrate
 
  (int greater than 0) This option specifies a desired video bitrate. For example, 5 * 1000 * 1000 would be 5Mbps.
  default use medium bitrate for 480p.
@@ -128,30 +128,44 @@ const videoHeight = 1080;
 const videoBitrate = HighBitrate(videoWidth, videoHeight);
 ```
 
- + ### videoProps
- component properties object for `react-native-video`.
- 
- + ### imageProps
- component properties object for `Image`.
- 
- + ### recordOptions
- supported options for recording.
+#### videoProps 
+component properties object for `react-native-video`.
 
- + ### maxImageWidth
- default 1920, set 0 / null / undefined is not be effected.
+<br>
  
-+ ### imageQuality
- (float between 0 to 1.0), default 1.0
-
-+ ### takePictureOptions
- supported options for taking picture.
-
-+ ### cameraProps
- component properties object for `react-native-camera`.
+#### imageProps
+component properties object for `Image`.
  
-+ ### onBack
- function to be called when confirm or cancel capturing.
- ```jsx
+<br>
+ 
+#### recordOptions
+supported options for recording.
+
+<br>
+
+#### maxImageWidth
+default 1920, set 0 / null / undefined is not be effected.
+ 
+<br>
+ 
+#### imageQuality
+(float between 0 to 1.0), default 1.0
+ 
+<br>
+
+#### takePictureOptions
+supported options for taking picture.
+
+<br>
+
+#### cameraProps
+component properties object for `react-native-camera`.
+
+<br> 
+ 
+#### onBack
+function to be called when confirm or cancel capturing.
+```jsx
 import RNCameraView from "react-native-camera-view";
 
 export default ()=>
@@ -176,3 +190,13 @@ export default ()=>
     );
 }
 ```
+
+<br>
+
+#### disableRecording
+default false
+
+<br>
+
+#### disableTakingPicture
+default false
