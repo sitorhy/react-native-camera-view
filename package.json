@@ -1,0 +1,11 @@
+{
+  "name": "react-native-camera-view",
+  "version": "0.0.1",
+  "description": "simple controls for react-native-camera",
+  "keywords": [
+    "react-native-camera"
+  ],
+  "repository": {
+    "url": "https://github.com/sitorhy/react-native-camera-view.git"
+  }
+}
