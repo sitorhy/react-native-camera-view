@@ -39,7 +39,7 @@ function Media({navigation, route}) {
 
     return (
         <View>
-            <Button title={"ÅÄÉã"} onPress={() => {
+            <Button title={"Shot"} onPress={() => {
                 navigation.push('Camera');
             }}/>
             {
