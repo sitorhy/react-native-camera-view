@@ -108,6 +108,14 @@ import {VideoQuality} from "react-native-camera-view";
 // ...
 ```
 
+<br>
+
+#### videoDuration
+default 10000 (10s);
+
+
+<br>
+
 
 #### videoBitrate
 

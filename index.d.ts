@@ -28,6 +28,7 @@ export type VideoQuality = Readonly<{
 export default class {
     videoQuality?: VideoQuality;
     videoBitrate ?: number;
+    videoDuration?: number;
     videoPreviewResizeMode ?: string;
     videoProps?: any;
     imagePreviewResizeMode?: string;
